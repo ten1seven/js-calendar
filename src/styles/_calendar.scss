@@ -1,0 +1,126 @@
+[data-module='calendar'] {
+  [aria-live] {
+    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+.calendar {
+  background-color: $color--olive-drab;
+  color: $color--white;
+  font: 14px/1 'Roboto', sans-serif;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.calender__caption {
+  background-color: #558307;
+  caption-side: top;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  div {
+    display: flex;
+  }
+}
+
+.calender__caption__text {
+  display: block;
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.calendar__prev,
+.calendar__next {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: $color--white;
+  display: block;
+  position: relative;
+  width: 30px;
+
+  &::before {
+    border-color: $color--white;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: block;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    width: 8px;
+  }
+}
+
+.calendar__prev {
+  &::before {
+    left: 10px;
+    transform: translate3d(0, -50%, 0) rotate(225deg);
+  }
+}
+
+.calendar__next {
+  &::before {
+    right: 10px;
+    transform: translate3d(0, -50%, 0) rotate(45deg);
+  }
+}
+
+.calendar__weekday {
+  font-weight: 400;
+  padding-top: 1em;
+  text-align: center;
+}
+
+.calendar__day {
+  padding: 1px;
+}
+
+.calendar__day__number {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+  width: 24px;
+
+  &.-upcoming {
+    background-color: $color--white;
+    color: $color--olive-drab;
+
+    &:focus,
+    &:hover {
+      background-color: $color--olive-drab;
+      border-color: $color--white;
+      color: $color--white;
+    }
+  }
+
+  &.-today {
+    background-color: $color--black;
+    color: $color--white;
+
+    &.-upcoming {
+      border-color: $color--white;
+    }
+  }
+
+  &.-lastmonth,
+  &.-nextmonth {
+    color: rgba($color--white, 0.3);
+  }
+}

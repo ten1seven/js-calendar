@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Calendar</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="assets/styles/index.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div
+      data-module="calendar"
+      data-month="9"
+      data-year="2018"
+      data-week-starts="0"
+      data-language='{"prev":"Previous Month","next":"Next Month"}'>
+
+      <script>
+        /*
+        window.dcMonthList = [
+          'Janvier',
+          'Février',
+          'Mars',
+          'Avril',
+          'Mai',
+          'Juin',
+          'Juillet',
+          'Août',
+          'Septembre',
+          'Octobre',
+          'Novembre',
+          'Décembre'
+        ];
+        */
+
+        /*
+        // weekdays always start with Sunday in the `0` position
+        window.dcDayList = [
+          { abbr: 'D', day: 'Dimanche' },
+          { abbr: 'L', day: 'Lundi' },
+          { abbr: 'M', day: 'Mardi' },
+          { abbr: 'M', day: 'Mercredi' },
+          { abbr: 'J', day: 'Jeudi' },
+          { abbr: 'V', day: 'Vendredi' },
+          { abbr: 'S', day: 'Samedi' }
+        ];
+        */
+
+        window.dcEventList = [
+          '2018-9-17',
+          '2018-9-18',
+          '2018-9-22',
+          '2018-9-25',
+          '2018-9-26',
+          '2018-10-31'
+        ];
+      </script>
+
+      <div aria-live="assertive" aria-atomic="true">September 2018</div>
+    </div>
+
+    <script src="assets/scripts/index.js"></script>
+
+  </body>
+</html>

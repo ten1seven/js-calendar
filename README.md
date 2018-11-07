@@ -1,2 +1,3 @@
-# js-calendar
-A little calendar widget
+# JavaScript Calendar Widget
+
+A simple little calendar widget
